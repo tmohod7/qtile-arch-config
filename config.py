@@ -126,11 +126,11 @@ screens = [
                 ),
                 widget.Sep(linewidth=0, padding=6, foreground=colors[2], background=colors[0]),
                 widget.TextBox(font="Ubuntu Bold",
-                	text="⟳", 
+                	text="", 
                 	padding = 5, 
                 	foreground=colors[2], 
                 	background=colors[4], 
-                	fontsize=20
+                	fontsize=14
                 ),
                 widget.Pacman(font="Ubuntu Bold",
                 	execute = "alacritty", 
@@ -152,6 +152,13 @@ screens = [
                         padding = 5,
                         update_interval = 2.0
                         ),
+                widget.DF(font="Ubuntu Bold",
+                	format='({uf}{m} / {f}{m} - {r:.0f}%)',
+                	padding = 5,
+                	visible_on_warn = False,
+                	foreground = colors[2],
+                        background = colors[5]                	
+                ),
                 widget.TextBox(font="Ubuntu Bold",
                         text=" ♫",
                         padding = 5,
@@ -179,7 +186,7 @@ screens = [
                         padding = 10
                         ),
                 widget.TextBox(font="Ubuntu Bold",
-                        text=" ☵",
+                        text=" ",
                         padding = 5,
                         foreground=colors[2],
                         background=colors[4],
@@ -214,7 +221,7 @@ screens = [
                 widget.Clock(font="Ubuntu Bold",
                         foreground = colors[2],
                         background = colors[4],
-                        format="%a, %d %b %y - %I:%M %p"
+                        format="%a %d %b %y - %I:%M %p"
                         ),
                 widget.Systray(
                         background=colors[0],
