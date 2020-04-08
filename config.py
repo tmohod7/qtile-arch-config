@@ -149,60 +149,61 @@ screens = [
                 widget.Memory(font="Ubuntu Bold",
                         foreground = colors[2],
                         background = colors[5],
-                        padding = 5
+                        padding = 5,
+                        update_interval = 2.0
                         ),
-                widget.TextBox(font="Ubuntu Bold",
-                        text=" ↯",
-                        foreground=colors[2],
-                        background=colors[4],
-                        padding = 0,
-                        fontsize=14
-                        ),
-                widget.Net(
-                	font="Ubuntu Bold",
-                	interface = "wlp2s0",
-                        foreground = colors[2],
-                        background = colors[4],
-                        padding = 10
-                ),
                 widget.TextBox(font="Ubuntu Bold",
                         text=" ♫",
                         padding = 5,
                         foreground=colors[2],
-                        background=colors[5],
+                        background=colors[4],
                         fontsize=14
                 ),
                 widget.Cmus(font="Ubuntu Bold",
                         max_chars = 40,
                         update_interval = 0.5,
-                        background=colors[5],
+                        background=colors[4],
                         play_color = colors[2],
                         noplay_color = colors[2]
                 ),
                 widget.TextBox(font="Ubuntu Bold",
                         text=" ",
                         foreground=colors[2],
-                        background=colors[4],
-                        padding = 0,
+                        background=colors[5],
+                        padding = 5,
                         fontsize=14
                         ),
                	widget.Volume(font="Ubuntu Bold", 
                         foreground = colors[2],
-                        background = colors[4],
+                        background = colors[5],
                         padding = 10
                         ),
                 widget.TextBox(font="Ubuntu Bold",
                         text=" ☵",
                         padding = 5,
                         foreground=colors[2],
-                        background=colors[5],
+                        background=colors[4],
                         fontsize=14
                         ),
                 widget.CurrentLayout(font="Ubuntu Bold",
                         foreground = colors[2],
-                        background = colors[5],
+                        background = colors[4],
                         padding = 5
                         ),
+                widget.TextBox(font="Ubuntu Bold",
+                	text=" ",
+                	padding = 5,
+                	foreground=colors[2],
+                	background=colors[5],
+                	fontsize=14
+                ),
+                widget.Battery(font="Ubuntu Bold",
+                	format="{char} {percent:2.0%}",
+                	foreground=colors[2],
+                	background=colors[5],
+                	fontsize=14,
+                	update_interval=5
+                ),
                 widget.TextBox(font="Ubuntu Bold",
                         text=" ",
                         foreground=colors[2],
@@ -213,13 +214,7 @@ screens = [
                 widget.Clock(font="Ubuntu Bold",
                         foreground = colors[2],
                         background = colors[4],
-                        format="%a, %b %d %y - %I:%M %p"
-                        ),        
-                widget.Sep(
-                        linewidth = 0,
-                        padding = 5,
-                        foreground = colors[0],
-                        background = colors[4]
+                        format="%a, %d %b %y - %I:%M %p"
                         ),
                 widget.Systray(
                         background=colors[0],
